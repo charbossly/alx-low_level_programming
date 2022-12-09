@@ -7,15 +7,11 @@
 */
 int main(void)
 {
-	char n;
+	int i;
 
-	for (n = 'a'; n <= 'z'; n++)
+	for (i = 0; i < 10; i++)
 	{
-	putchar(n);
-	}
-	for (n = 'A'; n <= 'Z'; n++)
-	{
-	putchar(n);
+	putchar(i % 10 + '0');
 	}
 	putchar('\n');
 	return (0);
