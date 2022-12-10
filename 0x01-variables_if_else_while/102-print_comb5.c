@@ -17,13 +17,16 @@ int main(void)
 			{
 				for (l = 0; l < 10 ; l++)
 				{
-				putchar(i % 10 + '0');
-				putchar(j % 10 + '0');
-				putchar(' ');
-				putchar(k % 10 + '0');
-				putchar(l % 10 + '0');
-				putchar(',');
-				putchar(' ');
+					if ((i * 10 + j) != (k * 10 + l))
+					{ 
+					putchar(i % 10 + '0');
+					putchar(j % 10 + '0');
+					putchar(' ');
+					putchar(k % 10 + '0');
+					putchar(l % 10 + '0');
+					putchar(',');
+					putchar(' ');
+					}
 				}
 			}
 		}
