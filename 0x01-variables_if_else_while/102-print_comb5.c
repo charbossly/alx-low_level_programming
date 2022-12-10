@@ -17,8 +17,8 @@ int main(void)
 			{
 				for (l = 0; l < 10 ; l++)
 				{
-					if ((i * 10 + j) != (k * 10 + l))
-					{ 
+					if ((i * 10 + j) != (k * 10 + l) && (i * 10 + j) < (k * 10 + l))
+					{
 					putchar(i % 10 + '0');
 					putchar(j % 10 + '0');
 					putchar(' ');
