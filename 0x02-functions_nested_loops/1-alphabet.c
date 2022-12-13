@@ -1,0 +1,24 @@
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+
+void print_alphabet(void)
+{
+	char n;
+
+	for (n = 'a'; n <= 'z'; n++)
+	{
+	printf('%c', n);
+	}
+	printf('\n');
+}
+
+int main(void)
+{
+print_alphabet();
+return (0);
+}
