@@ -16,7 +16,7 @@ void print_alphabet(void)
 	{
 	putchar(n);
 	}
-	printf('\n');
+	putchar('\n');
 }
 
 int main(void)
