@@ -12,7 +12,7 @@ int _isalpha(int c)
 
 	if (isalpha(c) || islower(c) || isupper(c))
 	{
-		return (1);	
+		return (1);
 	}
 	return (0);
 }
