@@ -2,7 +2,7 @@
 
 /**
  * print_sign - check the code
- * @parametern: Description of parameter n 
+ * @n: Description of parameter n
  *
  * Return: Always 0.
  */

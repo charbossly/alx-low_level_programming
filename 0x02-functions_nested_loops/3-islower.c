@@ -1,8 +1,7 @@
 #include "main.h"
-#include <ctype.h>
 /**
  * _islower - check the code
- * @parameterc: Description of parameter c 
+ * @c: Description of parameter c
  *
  * Return: 1 if c is lowercase.
  */
