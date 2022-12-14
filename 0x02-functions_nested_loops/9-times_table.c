@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_alphabet - check the code
+ * times_table - check the code
  *
  * Return: Always 0.
  */
 
-void print_alphabet(void)
+void times_table(void)
 {
 	char n;
 

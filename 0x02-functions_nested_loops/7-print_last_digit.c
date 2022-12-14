@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_alphabet - check the code
+ * print_last_digit - check the code
  *
  * Return: Always 0.
  */
 
-void print_alphabet(void)
+int print_last_digit(int)
 {
 	char n;
 
