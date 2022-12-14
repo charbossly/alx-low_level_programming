@@ -3,6 +3,7 @@
 
 /**
  * _isalpha - check the code
+ * @parameterc: Description of parameter c 
  *
  * Return: Always 0.
  */

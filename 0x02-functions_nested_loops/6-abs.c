@@ -4,6 +4,7 @@
 
 /**
  * _abs - check the code
+ * @parametera: Description of parameter a
  *
  * Return: Always 0.
  */
