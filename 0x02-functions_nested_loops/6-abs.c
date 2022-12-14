@@ -1,5 +1,6 @@
 #include "main.h"
 #include <math.h>
+#include <stdlib.h>
 
 /**
  * _abs - check the code
