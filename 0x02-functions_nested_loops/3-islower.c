@@ -3,18 +3,18 @@
 /**
  * _islower - check the code
  *
- * Return: Always 0.
+ * Return: 1 if c is lowercase.
  */
 
 int _islower(int c)
 {
 
-	if( islower(c) > 0)
+	if (islower(c) > 0)
 	{
 		return (1);
 	}
 	else
 	{
-		return 0;
+		return (0);
 	}
 }
