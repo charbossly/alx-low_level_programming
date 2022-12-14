@@ -6,13 +6,7 @@
  * Return: Always 0.
  */
 
-int print_last_digit(int)
+int print_last_digit(int a)
 {
-	char n;
-
-	for (n = 'a'; n <= 'z'; n++)
-	{
-		_putchar(n);
-	}
-	_putchar('\n');
+	return (a % 10);
 }
