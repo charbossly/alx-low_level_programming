@@ -2,13 +2,13 @@
 
 /**
 *  print_line - This is a description
-*  @a: Description of parameter a
+*  @n: Description of parameter n
 */
 void print_line(int n)
 {
 	int i;
 
-	if (i < 0 || i == 0)
+	if (n < 0 || n == 0)
 	{
 		_putchar('');
 	}
