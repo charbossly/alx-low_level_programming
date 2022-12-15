@@ -2,6 +2,7 @@
 
 /**
 *  print_line - This is a description
+* @a: Description of parameter a
 */
 void print_line(int n)
 {
@@ -9,6 +10,7 @@ void print_line(int n)
 
 	if (i < 0 || i == 0)
 	{
+		_putchar('');
 	}
 	else
 	{
