@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <ctype.h>
+#include "main.h"
 
 /**
 * print_numbers - This is a description
