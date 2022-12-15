@@ -3,13 +3,13 @@
 #include <ctype.h>
 
 /**
-* _isupper - This is a description
+* _isdigit - This is a description
 * @c: Description of parameter c
 * Return: 0 if no upper
 */
-int _isupper(int c)
+int _isdigit(int c)
 {
-	if (isupper(c) != 0)
+	if (isdigit(c) != 0)
 	{
 		return (1);
 	}
