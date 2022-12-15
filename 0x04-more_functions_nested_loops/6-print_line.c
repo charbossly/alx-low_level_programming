@@ -2,7 +2,7 @@
 
 /**
 *  print_line - This is a description
-* @a: Description of parameter a
+*  @a: Description of parameter a
 */
 void print_line(int n)
 {
