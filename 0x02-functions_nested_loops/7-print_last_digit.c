@@ -2,6 +2,7 @@
 
 /**
  * print_last_digit - check the code
+ * @a: Description of parameter a
  *
  * Return: Always 0.
  */
