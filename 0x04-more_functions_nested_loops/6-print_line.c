@@ -1,23 +1,16 @@
 #include "main.h"
 
 /**
-*  print_line - This is a description
+* print_line - This is a description
 *  @n: Description of parameter n
 */
 void print_line(int n)
 {
 	int i;
 
-	if (n < 0 || n == 0)
+	for (i = 0; i < 10; i++)
 	{
-		_putchar('');
-	}
-	else
-	{
-		for (i = 0; i < n; i++)
-		{
-			_putchar('_');
-		}
+		_putchar(i % 10 + '0');
 	}
 	_putchar('\n');
 }
