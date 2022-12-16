@@ -13,7 +13,7 @@ void more_numbers(void)
 		{
 			if (j >= 10)
 			{
-				_putchar('1');
+				printf("1");
 			}
 			_putchar(j % 100 + '0');
 		}
