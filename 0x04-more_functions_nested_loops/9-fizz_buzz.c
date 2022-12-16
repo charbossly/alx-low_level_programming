@@ -1,9 +1,9 @@
 #include <stdlib.h>
-#include <stdio.h> 
+#include <stdio.h>
 
 /**
 * main - This is a description
-* Return 0 
+* Return: Always 0.
 */
 
 int main(void)
@@ -21,13 +21,13 @@ int main(void)
 			printf("Fizz");
 		}
 		else if (i % 5 == 0)
-                {
-                        printf("Buzz");
-                }
+		{
+			printf("Buzz");
+		}
 		else
 		{
 			printf("%d", i);
-		}			
+		}
 		printf(" ");
 	}
 	printf("\n");
