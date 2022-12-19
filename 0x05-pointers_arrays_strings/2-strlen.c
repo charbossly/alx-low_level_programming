@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
 * _strlen - This is a description
@@ -7,5 +8,5 @@
 */
 int _strlen(char *s)
 {
-	return (sizeof(*s));
+	return (strlen(*s));
 }
