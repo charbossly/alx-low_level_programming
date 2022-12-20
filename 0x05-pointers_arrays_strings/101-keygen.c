@@ -10,15 +10,14 @@
 */
 int main(void) {
 	int i;
-	char abc[26]="abcdefghijklmnopqrstuvwxyz";
 	char newabc[8];
 
 	srand(time(NULL));
-	for (i = 0; i < 12; ++i) {
-		newabc[i] = abc[rand() % (sizeof(abc) - 1)];
+	for (i = 0; i < 12; i++) {
+		newabc[i] = rand() % 128;
 		printf("%c ", newabc[i]);
 	}
 	printf("\n"); 
 	
-	return 0;
+	return (0);
 }
