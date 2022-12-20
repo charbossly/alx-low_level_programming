@@ -1,16 +1,18 @@
 #include "main.h"
 
 /**
-* puts_half - This is a description
-* @str: Description of parameter str
+* _strcpy - This is a description
+* @dest: Description of parameter dest 
+* @src: Description of parameter src
+* Return: Always char.
 */
-void puts_half(char *str)
+char *_strcpy(char *dest, char *src)
 {
 	int i;
 
-	for ( i = (strlen(str) - 1 / 2); i < strlen(str); i++)
+	for (i = 0; i < (int) strlen(src); i++)
 	{
-		_putchar(*(str+i));
+		*(dest + i) = *(src + i);
 	}
-	_putchar('\n');
+	return (dest);
 }
