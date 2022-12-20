@@ -18,7 +18,7 @@ int main(void) {
 		newabc[i] = abc[rand() % (sizeof(abc) - 1)];
 		printf("%c ", newabc[i]);
 	}
-	printf('\n'); 
+	printf("\n"); 
 	
 	return 0;
 }
