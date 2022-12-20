@@ -19,7 +19,7 @@ void print_array(int *a, int n)
 				_putchar(' ');
 			}
 		}
-		_putchar(*(str + i));
+		_putchar(*(a + i));
 	}
 	_putchar('\n');
 }
