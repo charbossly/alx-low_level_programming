@@ -6,7 +6,7 @@
 * @s: Description of parameter s
 * Return: integer
 */
-int _atoi(char *s);
+int _atoi(char *s)
 {
 	int i, d, n, len, f, digit;
 	
@@ -30,7 +30,7 @@ int _atoi(char *s);
 		if (s[i] >= '0' && s[i] <= 9)
 		{
 			digit = s[i] - '0';
-			if (d%2)
+			if (d%2 ==0 )
 			{
 				digit = -digit;
 			}
