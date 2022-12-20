@@ -1,8 +1,9 @@
 #include "main.h"
+#include <string.h>
 
 /**
 * _strcpy - This is a description
-* @dest: Description of parameter dest 
+* @dest: Description of parameter dest
 * @src: Description of parameter src
 * Return: Always char.
 */
