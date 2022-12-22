@@ -2,35 +2,22 @@
 #include <ctype.h>
 
 /**
-* cap_string - This is a description
-* @charS: Description of parameter charS
-* Return: un string
+* _strcmp - This is a description
+* @s1: Description of parameter s1
+* @s2: Description of parameter s2
+* Return: 0
 */
-char *cap_string(char *charS)
+int _strcmp(char *s1, char *s2)
 {
-	char LowerC;
 	int i = 0;
 
-	while (charS[i] != '\0')
+	while (s1[i] != '\0')
 	{
-		if (charS[i] == ' ' || charS[i] == '\n' || charS[i] == '\t')
+		if (s1[i] != s2[i])
 		{
-			LowerC = toupper(charS[i + 1]);
-			charS[i + 1] = LowerC;
+			return (s1[i] - s2[i]);
 		}
-		if (charS[i] == ',' || charS[i] == ';' || charS[i] == '.' || charS[i] == '!')
-		{
-			LowerC = toupper(charS[i + 1]);
-			charS[i + 1] = LowerC;
-		}
-		if (charS[i] == '\"' || charS[i] == '(' || charS[i] == ')' || charS[i] == '?' || charS[i] == '{' || charS[i] == '}')
-		{
-			LowerC = toupper(charS[i + 1]);
-			charS[i + 1] = LowerC;
-		}
-
-
 		i++;
 	}
-	return (charS);
+	return (0);
 }
