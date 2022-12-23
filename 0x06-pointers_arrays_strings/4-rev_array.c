@@ -27,5 +27,4 @@ void reverse_array(int *a, int n)
 		a[i] = tab[i];
 		i++;
 	}
-	printf("\n");
 }
