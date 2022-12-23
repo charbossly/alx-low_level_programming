@@ -13,14 +13,14 @@ char *rot13(char *str)
 	char tab[52] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 	char tab2[52] = {'N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A','B','C','D','E','F','G','H','I','J','K','L','M','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m'};
 	
-	for (i = 0;i < (int)(sizeof(str)/sizeof('c')); i++)
+	for (i = 0;i < (int)(strlen(str)); i++)
 	{
 		index = 0;
-		while (index < 53 && tab[index] != str[i])
+		while (index < 53 && tab[index] != str[i] && str[i] !='\0')
 		{
 			index++; 
 		}
-		if (index != (int) sizeof(str)/sizeof('c'))
+		if (index != (int) strlen(str))
 		{
 			str[i] = tab2[index];	
 		}
@@ -28,6 +28,7 @@ char *rot13(char *str)
 		{
 			str[i] = str[i];
 		}
+		index = 0;
 	}
 	return str;
 }
