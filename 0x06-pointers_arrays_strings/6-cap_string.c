@@ -35,5 +35,6 @@ char *cap_string(char *charS)
 		}
 		i++;
 	}
+	charS[i] = '\0';
 	return (charS);
 }
