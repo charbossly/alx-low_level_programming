@@ -23,13 +23,16 @@ char *cap_string(char *charS)
 			LowerC = toupper(charS[i + 1]);
 			charS[i + 1] = LowerC;
 		}
-		if (charS[i] == '\"' || charS[i] == '(' || charS[i] == ')' || charS[i] == '?' || charS[i] == '{' || charS[i] == '}')
+		if (charS[i] == '\"' || charS[i] == '(')
 		{
 			LowerC = toupper(charS[i + 1]);
 			charS[i + 1] = LowerC;
 		}
-
-
+		if (charS[i] == ')' || charS[i] == '?' || charS[i] == '{' || charS[i] == '}')
+		{
+			LowerC = toupper(charS[i + 1]);
+			charS[i + 1] = LowerC;
+		}
 		i++;
 	}
 	return (charS);
