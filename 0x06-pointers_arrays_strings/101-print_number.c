@@ -6,6 +6,7 @@
 */
 void print_number(int n)
 {
-
-	_putchar(n % 10000 + '0');
+	int *p;
+	p = &n; 
+	_putchar((*p)%10);
 }

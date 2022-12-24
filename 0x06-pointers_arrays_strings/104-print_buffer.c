@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * print_buffer - check the code
- * @b: an array of chars
- * @size: the number
+ * reverse_array - check the code
+ * @a: an array of integers
+ * @n: the number of elements to swap
  *
  * Return: nothing.
  */
-void print_buffer(char *b, int size)
+void reverse_array(int *a, int n)
 {
 	int i, j;
 	int tab[13];
