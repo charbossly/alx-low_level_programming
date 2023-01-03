@@ -13,42 +13,31 @@ char *_strstr(char *haystack, char *needle)
 	int j = 0;
 	int count = 0;
 	char *p;
-	int go = 0;
-	int match = 0;
+	int k = 0;
+	int found = 0;
 
-	while (needle[j] != '\0')
+	while (needle[j])
 	{
 		count++;
 	}
-	for (j = 0; needle[j] != '\0'; j++)
-	{
-		for (i = 0; haystack[i] != '\0'; i++)
+	while (haystack[i])
+        {
+		if (haystack[i] == needle[0])
 		{
-			if (needle[j] == haystack[i])
+			for (k = 0; k < count; k++)
 			{
-				match = 0;
-				while (match <= count)
+				if (haystack[k + i] == needle[k])
 				{
-					if (needle[j + match] == haystack[i + match])
-					{
-						go = 1;
-					}
-					else
-					{
-						go = 0;
-						match = 0;
-						break;
-					}
-					match++;
+					found++;
 				}
-				if (go == 1)
-				{
-					p = &needle[0];
-					break;
-				}
-
+			}
+			if (found == count)
+			{
+				p = needle;
+				break;
 			}
 		}
-	}
+		i++;
+        }
 	return (p);
 }
