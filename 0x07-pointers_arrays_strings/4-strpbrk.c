@@ -9,8 +9,8 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i = 0;
-	int j = 0;
+	int i;
+	int j;
 	int found = 0;
 	char *p;
 
