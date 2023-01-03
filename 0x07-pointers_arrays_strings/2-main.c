@@ -11,7 +11,7 @@ int main(void)
     char *s = "First, solve the problem. Then, write the code.";
     char *f;
 
-    f = _strchr(s, ',');
+    f = _strchr(s, '\0');
 
     if (f != NULL)
     {
