@@ -1,0 +1,514 @@
+!<arch>
+0-isupper.c/    0           0     0     644     237       `
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+
+/**
+* _isupper - This is a description
+* @c: Description of parameter c
+* Return: 0 if no upper
+*/
+int _isupper(int c)
+{
+	if (isupper(c) != 0)
+	{
+		return (1);
+	}
+	return (0);
+}
+
+0-memset.c/     0           0     0     644     302       `
+#include "main.h"
+
+/**
+* _memset - This is a description
+* @s: Description of parameter s
+* @b: Description of parameter b
+* @n: Description of parameter n
+* Return: 0
+*/
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	i = 0;
+	while (i < n)
+	{
+		s[i] = b;
+		i++;
+	}
+	return (s);
+}
+0-strcat.c/     0           0     0     644     459       `
+#include "main.h"
+
+/**
+* _strcat  - This is a description
+* @dest: Description of parameter s1
+* @src: Description of parameter s2
+* Return: 0
+*/
+
+char *_strcat(char *dest, char *src)
+{
+	char result[15];
+	int i = 0;
+	int p = 0;
+
+	while (dest[i] != '\0')
+	{
+		result[p] = dest[i];
+		i++;
+	}
+	p = i;
+	i = 0;
+	while (src[i] != '\0')
+	{
+		result[p] = src[i];
+		i++;
+		p++;
+	}
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		dest[i] = result[i];
+		i++;
+	}
+	return (dest);
+}
+
+100-atoi.c/     0           0     0     644     601       `
+#include "main.h"
+#include <string.h>
+
+/**
+* _atoi - This is a description
+* @s: Description of parameter s
+* Return: integer
+*/
+int _atoi(char *s)
+{
+	int i, d, n, len, f, digit;
+	
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+	
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	while (i<len && f ==0)
+	{
+		if (s[i] == '-')
+		{
+			++d;
+		}
+		if (s[i] >= '0' && s[i] <= 9)
+		{
+			digit = s[i] - '0';
+			if (d%2 ==0 )
+			{
+				digit = -digit;
+			}
+			n = n*10+digit;
+			f = 1;
+			if (s[i+1] < '0' || s[i+1] > '9')
+			{
+				break;
+			}
+			f = 0;
+		}
+		i++;
+	}
+	if (f==0)
+	{
+		return (0);
+	}
+	return (n);
+}
+
+1-isdigit.c/    0           0     0     644     237       `
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+
+/**
+* _isdigit - This is a description
+* @c: Description of parameter c
+* Return: 0 if no upper
+*/
+int _isdigit(int c)
+{
+	if (isdigit(c) != 0)
+	{
+		return (1);
+	}
+	return (0);
+}
+
+1-memcpy.c/     0           0     0     644     329       `
+#include "main.h"
+
+/**
+* _memcpy - This is a description
+* @dest: Description of parameter dest
+* @src: Description of parameter src
+* @n: Description of parameter n
+* Return: 0
+*/
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
+}
+
+1-strncat.c/    0           0     0     644     445       `
+#include "main.h"
+
+/**
+* _strncat - This is a description
+* @dest: Description of parameter s1
+* @src: Description of parameter s2
+* @n: Description of parameter n
+* Return: 0
+*/
+
+char *_strncat(char *dest, char *src, int n)
+{
+	char *result = "";
+	int i = 0;
+
+	while (dest[i] != '\0')
+	{
+		result += dest[i];
+		i++;
+	}
+	i = n - 1;
+	while ( src[i] != '\0')
+	{
+		result += *(src + (n - i + 1)) ;
+		i--;
+	}
+
+	*dest = *result; 	
+	return (result);
+}
+
+2-strchr.c/     0           0     0     644     316       `
+#include "main.h"
+
+/**
+* _strchr - This is a description
+* @s: Description of parameter s
+* @c: Description of parameter c
+* Return: 0
+*/
+
+char *_strchr(char *s, char c)
+{
+	char *p;
+
+	while (*s != '\0')
+	{
+		if (*s == c)
+		{
+			p = s;
+			return (p);
+		}
+		++s;
+	}
+	if (*s == c)
+	{
+		return (s);
+	}
+	return ('\0');
+}
+2-strlen.c/     0           0     0     644     179       `
+#include "main.h"
+#include <string.h>
+
+/**
+* _strlen - This is a description
+* @s: Description of parameter s
+* Return: Always 0.
+*/
+int _strlen(char *s)
+{
+	return (strlen(s));
+}
+
+2-strncpy.c/    0           0     0     644     321       `
+#include "main.h"
+
+/**
+* _strncpy - This is a description
+* @dest: Description of parameter dest
+* @src: Description of parameter src
+* @n: Description of parameter n
+* Return: string
+*/
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i = 0;
+
+	for (i = 0; i < n; i++)
+	{
+		*(dest + i) = src[i];
+	}
+	return (dest);
+}
+
+3-islower.c/    0           0     0     644     236       `
+#include "main.h"
+#include <ctype.h>
+/**
+ * _islower - check the code
+ * @c: Description of parameter c
+ *
+ * Return: 1 if c is lowercase.
+ */
+
+int _islower(int c)
+{
+
+	if (islower(c) > 0)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+3-puts.c/       0           0     0     644     152       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+* _puts - This is a description
+* @str: Description of parameter str
+*/
+void _puts(char *str)
+{
+	puts(str);
+}
+3-strcmp.c/     0           0     0     644     316       `
+#include "main.h"
+#include <ctype.h>
+
+/**
+* _strcmp - This is a description
+* @s1: Description of parameter s1
+* @s2: Description of parameter s2
+* Return: 0
+*/
+int _strcmp(char *s1, char *s2)
+{
+	int i = 0;
+
+	while (s1[i] != '\0')
+	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+		i++;
+	}
+	return (0);
+}
+3-strspn.c/     0           0     0     644     477       `
+#include "main.h"
+
+/**
+* _strspn - This is a description
+* @s: Description of parameter s
+* @accept: Description of parameter accept
+* Return: 0
+*/
+
+unsigned int _strspn(char *s, char *accept)
+{
+	int i = 0;
+	int j = 0;
+	unsigned int count = 0;
+	int found = 0;
+
+	for (j = 0; s[j] != '\0'; j++)
+	{
+		for (i = 0; accept[i] != '\0'; i++)
+		{
+			if (s[j] == accept[i])
+			{
+				found = 1;
+				count++;
+			}
+		}
+		if (found == 0)
+		{
+			break;
+		}
+		found = 0;
+	}
+	return (count);
+}
+
+4-isalpha.c/    0           0     0     644     237       `
+#include "main.h"
+#include <ctype.h>
+
+/**
+ * _isalpha - check the code
+ * @c: Description of parameter c
+ *
+ * Return: Always 0.
+ */
+
+int _isalpha(int c)
+{
+
+	if (isalpha(c) || islower(c) || isupper(c))
+	{
+		return (1);
+	}
+	return (0);
+}
+
+4-strpbrk.c/    0           0     0     644     427       `
+#include "main.h"
+
+/**
+* _strpbrk - This is a description
+* @s: Description of parameter s
+* @accept: Description of parameter accept
+* Return: 0
+*/
+
+char *_strpbrk(char *s, char *accept)
+{
+	unsigned int i;
+	unsigned int j;
+
+	for (j = 0; *(s + j); j++)
+	{
+		for (i = 0; *(accept + i); i++)
+		{
+			if (*(accept + i) == *(s + j))
+			{
+				break;
+			}
+		}
+		if (*(accept + i) != '\0')
+		{
+			return (s + j);
+		}
+	}
+	return (0);
+}
+
+5-strstr.c/     0           0     0     644     456       `
+#include "main.h"
+
+/**
+* _strstr - This is a description
+* @haystack: Description of parameter haystack
+* @needle: Description of parameter needle
+* Return: 0
+*/
+
+char *_strstr(char *haystack, char *needle)
+{
+	char *p, *q;
+
+	while (*haystack != '\0')
+	{
+		q = needle;
+		p = haystack;
+
+		while (*haystack != '\0' && *q != '\0' && *haystack == *q)
+		{
+			haystack++;
+			q++;
+		}
+		if (*q == '\0')
+		{
+			return (p);
+		}
+		haystack = p + 1;
+	}
+	return (0);
+}
+6-abs.c/        0           0     0     644     187       `
+#include "main.h"
+#include <math.h>
+#include <stdlib.h>
+
+/**
+ * _abs - check the code
+ * @a: Description of parameter a
+ *
+ * Return: Always 0.
+ */
+
+int _abs(int a)
+{
+	return (abs(a));
+}
+
+9-strcpy.c/     0           0     0     644     320       `
+#include "main.h"
+#include <string.h>
+
+/**
+* _strcpy - This is a description
+* @dest: Description of parameter dest
+* @src: Description of parameter src
+* Return: Always char.
+*/
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; i < (int) strlen(src); i++)
+	{
+		*(dest + i) = *(src + i);
+	}
+	return (dest);
+}
+main.c/         0           0     0     644     148       `
+#include "main.h"
+
+int main(void)
+{
+    _puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+    return (0);
+}
+_putchar.c/     0           0     0     644     296       `
+#include <unistd.h>
+#include "holberton.h"
+
+/**
+ *  * _putchar - writes the character c to stdout
+ *   * @c: The character to print
+ *    *
+ *     * Return: On success 1.
+ *      * On error, -1 is returned, and errno is set appropriately.
+ **/
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
