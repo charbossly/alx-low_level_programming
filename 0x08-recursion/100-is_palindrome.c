@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * tall - Description 
+ * tall - Description
  * @a: parameter a
  * @s: parameter s
  * Return: length.
@@ -19,15 +19,16 @@ int tall(char *s, int a)
 		if (*s && *s++)
 		{
 			a = a + 1;
-			return tall(s++, a);
+			return (tall(s++, a));
 		}
-		return (a); 
+		return (a);
 	}
 }
 /**
 * palindrome - This is a description
 * @i: Description of parameter i
 * @j: Description of parameter j
+* @s: Description of parameter s
 * Return: boolean
 */
 
@@ -37,14 +38,14 @@ bool palindrome(char *s, int i, int j)
 	{
 		if (j == 0)
 		{
-			return true;
+			return (true);
 		}
-		return palindrome(s, ++i, --j);
+		return (palindrome(s, ++i, --j));
 	}
 	else
-	{ 
-		return false;
-	}	
+	{
+		return (false);
+	}
 }
 /**
 * is_palindrome - This is a description
