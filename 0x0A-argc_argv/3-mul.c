@@ -11,7 +11,6 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 0;
 	int mul = 0;
 
 	if (argc == 3)
