@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
 			i = (reste / 25) + ((reste % 25) / 10);
 			reste = ((reste % 25) % 10);
 			i += (reste / 5) + ((reste % 5) / 2);
-			reste = (reste % 5) % 2; 
-			i +=reste;
+			reste = (reste % 5) % 2;
+			i += reste;
 			printf("%d\n", i);
 		}
 		return (0);
