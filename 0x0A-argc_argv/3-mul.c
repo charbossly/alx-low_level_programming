@@ -14,14 +14,13 @@ int main(int argc, char *argv[])
 	int i = 0;
 	int mul = 0;
 
-	if (argc > 1)
+	if (argc == 3)
 	{
-		for (i = 1; i < argc; i++)
+		for (i = 1; i < 3; i++)
 		{
 			mul *= atoi(argv[i]);
 		}
-		printf("%d", mul);
-		printf("\n");
+		printf("%d\n", mul);
 		return (0);
 	}
 	else
