@@ -16,10 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 3)
 	{
-		for (i = 1; i < 3; i++)
-		{
-			mul *= atoi(argv[i]);
-		}
+		mul = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", mul);
 		return (0);
 	}
