@@ -11,13 +11,12 @@ int tall(char *s)
 {
 	int i = 0;
 
-	while(*s)
+	while (*s)
 	{
 		i++;
 		s++;
 	}
-	  
-        return (i);
+	return (i);
 }
 /**
  * _strdup - the code
@@ -30,9 +29,13 @@ char *_strdup(char *str)
 	int height = 0;
 	int i = 0;
 
+	if (!str)
+	{
+		return (NULL);
+	}
 	height = tall(str);
 	s = malloc(sizeof(*s) * height + 1);
-	while(*str)
+	while (*str)
 	{
 		s[i] = *str;
 		i++;
