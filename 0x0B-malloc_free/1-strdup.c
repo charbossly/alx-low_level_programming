@@ -35,7 +35,7 @@ char *_strdup(char *str)
 	}
 	height = tall(str);
 	s = malloc(sizeof(*s) * height + 1);
-	if (s == null)
+	if (s == NULL)
 	{
 		return (NULL);
 	}
