@@ -11,13 +11,13 @@ int tall(char *s)
 {
 	int i = 0;
 
-	while(*s)
+	while (*s)
 	{
 		i++;
 		s++;
 	}
-	  
-        return (i);
+
+	return (i);
 }
 /**
  * str_concat - the code
@@ -28,19 +28,27 @@ int tall(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	int height =0;
+	int height = 0;
 	int i = 0;
 	int j = 0;
 
-	height = tall(s1) + tall(s2) ;
+	if (!*s1 || !*s2)
+	{
+		return (NULL);
+	}
+	height = tall(s1) + tall(s2);
 	s = malloc(sizeof(*s) * height + 1);
-	while(*s1)
+	if (!s)
+	{
+		return (NULL);
+	}
+	while (*s1)
 	{
 		s[i] = *s1;
 		i++;
 		s1++;
 	}
-	while(*s2)
+	while (*s2)
 	{
 		s[i + j] = *s2;
 		j++;
