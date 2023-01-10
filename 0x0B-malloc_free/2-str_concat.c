@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 	int j = 0;
 
-	if (!*s1 || !*s2)
+	if (*s1 == NULL || *s2 == NULL)
 	{
 		return (NULL);
 	}
