@@ -35,6 +35,10 @@ char *_strdup(char *str)
 	}
 	height = tall(str);
 	s = malloc(sizeof(*s) * height + 1);
+	if (s == null)
+	{
+		return (NULL);
+	}
 	while (*str)
 	{
 		s[i] = *str;
