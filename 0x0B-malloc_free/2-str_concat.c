@@ -32,10 +32,6 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 	int j = 0;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		return (NULL);
-	}
 	height = tall(s1) + tall(s2);
 	s = malloc(sizeof(*s) * height + 1);
 	if (!s)
@@ -56,4 +52,5 @@ char *str_concat(char *s1, char *s2)
 	}
 	s[i + j] = '\0';
 	return (s);
+	free(s);
 }
