@@ -3,54 +3,24 @@
 #include <stdlib.h>
 
 /**
- * tall - the code
- * @s: parameter s
- * Return: Always 0.
+ * free_grid - frees 2 dimensional grid
+ * @grid: two dimensional grid
+ * @height: height of the array
+ *
+ * Return: a pointer to a 2 dimensional array of integers
  */
-int tall(char *s)
+void free_grid(int **grid, int height)
 {
-	int i = 0;
+	int a;
 
-	while (*s)
+	if (grid == '\0' || height <= 0)
 	{
-		i++;
-		s++;
+		return;
 	}
 
-	return (i);
-}
-/**
- * str_concat - the code
- * @s1: parameter s1
- * @s2: parameter s2
- * Return: Always 0.
- */
-char *str_concat(char *s1, char *s2)
-{
-	char *s;
-	int height = 0;
-	int i = 0;
-	int j = 0;
-
-	height = tall(s1) + tall(s2);
-	s = malloc(sizeof(*s) * height + 1);
-	if (!s)
+	for (a = height - 1; a >= 0 ; a--)
 	{
-		return (NULL);
+		free(grid[a]);
 	}
-	while (*s1 && s1 != NULL)
-	{
-		s[i] = *s1;
-		i++;
-		s1++;
-	}
-	while (*s2 && s2 != NULL)
-	{
-		s[i + j] = *s2;
-		j++;
-		s2++;
-	}
-	s[i + j] = '\0';
-	return (s);
-	free(s);
+	free(grid);
 }
