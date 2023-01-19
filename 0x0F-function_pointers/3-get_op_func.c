@@ -1,4 +1,4 @@
-nclude "3-calc.h"
+#include "3-calc.h"
 /**
  * get_op_func - get the operator function
  * @s: operator passed as argument to the program

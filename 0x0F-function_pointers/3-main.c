@@ -1,4 +1,4 @@
-nclude "3-calc.h"
+#include "3-calc.h"
 /**
  * main - main function
  * @argc: argument counter
