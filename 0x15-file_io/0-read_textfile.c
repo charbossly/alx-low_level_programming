@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * read_textfile - this function reads a text file and prints it to the POSIX
  * @filename: name of the file
